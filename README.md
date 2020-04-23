@@ -27,6 +27,4 @@ java -jar target/helloworld-1.0-SNAPSHOT.jar
   a. GitHub project [provide the github repository url e.g. https://github.com/sureshmurthy85/forrester_demo_2020/]
   b. Under Built Triggers enable - GitHub hook trigger for GITScm polling
 ````
-Let's Get This Party Started
-Long commit name and description
-dsds
+1st
