@@ -1,0 +1,15 @@
+node {
+    properties([
+            parameters([
+                    string(name: 'proj', defaultValue: ''),
+                    string(name: 'pipe', defaultValue: ''),
+
+            ])
+    ])
+
+
+    stage('test') {
+        echo "${proj}"
+        echo "${pipe}"
+    }
+}
