@@ -2,7 +2,7 @@ node {
     properties([
             parameters([
                     string(name: 'proj', defaultValue: 'Default'),
-                    string(name: 'pipe', defaultValue: 'qe pipeline'),
+                    string(name: 'pipe', defaultValue: 'qe_pipeline'),
 
             ])
     ])
