@@ -7,8 +7,8 @@ node {
             ])
     ])
    def mvnHome
-   //def artVersion = UUID.randomUUID().toString()
-   //def artName = UUID.randomUUID().toString()
+   def artVersion = UUID.randomUUID().toString()
+   def artName = UUID.randomUUID().toString()
    stage('Build') {
       cleanWs()
       git 'https://github.com/amikheev-1303/jenkins_trigger.git'
