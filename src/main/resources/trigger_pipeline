@@ -1,4 +1,11 @@
 node {
+   properties([
+            parameters([
+                    string(name: 'project', defaultValue: ''),
+                    string(name: 'pipe', defaultValue: ''),
+
+            ])
+    ])
    def mvnHome
    //def artVersion = UUID.randomUUID().toString()
    //def artName = UUID.randomUUID().toString()
