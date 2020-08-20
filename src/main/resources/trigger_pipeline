@@ -17,12 +17,12 @@ node {
           sh '"$MVN_HOME/bin/mvn" install'
       }
    }
-   stage('Archive') {
-       //archiveArtifacts 'test1.txt'
+    /*stage('Archive') {
+      archiveArtifacts 'test1.txt'
    }
     stage('Publish'){
         //cloudBeesFlowPublishArtifact artifactName: "com.demo:test1", artifactVersion: "${artVersion} - 1 -SNAPSHOT", configuration: 'flow-server', filePath: 'test1.txt', repositoryName: 'default'
-   }
+   } /*
    stage('Test') {
        junit 'target/surefire-reports/*.xml'
    }   
