@@ -18,7 +18,7 @@ node {
       }
    }
    stage('Archive') {
-      //archiveArtifacts 'test1.txt'
+      //archiveArtifacts 'test1.txt' nullpointer
    }
     stage('Publish'){
         //cloudBeesFlowPublishArtifact artifactName: "com.demo:test1", artifactVersion: "${artVersion} - 1 -SNAPSHOT", configuration: 'flow-server', filePath: 'test1.txt', repositoryName: 'default'
