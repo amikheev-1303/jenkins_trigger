@@ -1,8 +1,8 @@
 node {
    properties([
             parameters([
-                    string(name: 'project', defaultValue: ''),
-                    string(name: 'pipe', defaultValue: ''),
+                    string(name: 'project', defaultValue: 'Default'),
+                    string(name: 'pipe', defaultValue: 'qe_p'),
 
             ])
     ])
