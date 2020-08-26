@@ -12,7 +12,7 @@ node {
    stage('Build') {
       cleanWs()
       git 'https://github.com/amikheev-1303/jenkins_trigger.git'
-      mvnHome = tool 'Maven 3.6.3'
+      mvnHome = tool 'mvn'
       withEnv(["MVN_HOME=$mvnHome"]) {
           sh '"$MVN_HOME/bin/mvn" install'
       }
