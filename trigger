@@ -3,7 +3,7 @@ node {
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
                     string(name: 'releaseName', defaultValue: 'qe release'),
-                    string(name: 'releasePipeName', defaultValue: 'qe release_pipeline'),
+                    string(name: 'releasePipeName', defaultValue: 'pipeline_qe release'),
                     string(name: 'stageName', defaultValue: 'qe stage'),
                     string(name: 'artVersion', defaultValue: UUID.randomUUID().toString()),
 
