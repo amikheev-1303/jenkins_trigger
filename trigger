@@ -6,7 +6,7 @@ node {
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
                     string(name: 'releaseName', defaultValue: 'qe release'),
-                    string(name: 'flowRunId', defaultValue: 'needToSpecifyId'),
+                    string(name: 'flowRunId', defaultValue: 'e9bb5a24-e926-11ea-a1b3-42010a000038'),
                     string(name: 'artVersion', defaultValue: "$artVersion"),
 
             ])
@@ -20,10 +20,10 @@ node {
       }
    }
    stage('Archive') {
-       archiveArtifacts 'test1.txt'
+       archiveArtifacts 'test2.txt'
    }
     stage('Publish'){
-        cloudBeesFlowPublishArtifact artifactName: "com.demo:test1", artifactVersion: "${artVersion} - 1 -SNAPSHOT", configuration: 'flow-server', filePath: 'test1.txt', repositoryName: 'default'
+        cloudBeesFlowPublishArtifact artifactName: "com.demo:test2", artifactVersion: "${artVersion} - 2 -SNAPSHOT", configuration: 'flow-server', filePath: 'test2.txt', repositoryName: 'default'
    }
    stage('Test') {
        junit 'target/surefire-reports/*.xml'
