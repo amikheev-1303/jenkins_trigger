@@ -1,4 +1,9 @@
 node {
+
+   def mvnHome
+   def artVersion = UUID.randomUUID().toString()
+   //def artName = UUID.randomUUID().toString()
+
    properties([
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
@@ -9,7 +14,6 @@ node {
 
             ])
     ])
-   def mvnHome
    stage('Build') {
       cleanWs()
       git 'https://github.com/amikheev-1303/jenkins_trigger.git'
@@ -19,15 +23,17 @@ node {
       }
    }
    stage('Archive') {
-       archiveArtifacts 'test1.txt'
+      archiveArtifacts 'test2.txt'
    }
     stage('Publish'){
-        cloudBeesFlowPublishArtifact artifactName: "com.demo:test1", artifactVersion: "${artVersion} - 1 -SNAPSHOT", configuration: 'flow-server', filePath: 'test1.txt', repositoryName: 'default'
+        cloudBeesFlowPublishArtifact artifactName: "com.demo:test2", artifactVersion: "${artVersion} - 2 -SNAPSHOT", configuration: 'flow-server', filePath: 'test2.txt', repositoryName: 'default'
+   }
    }
    stage('Test') {
        junit 'target/surefire-reports/*.xml'
    }   
    stage('Pipeline') {
-       cloudBeesFlowTriggerRelease configuration: 'flow-server', parameters: '{"release":{"releaseName":"${releaseName}","stages":[{"stageName":"${stageName}","stageValue":""}],"pipelineName":"${releasePipeName","parameters":[]}}', projectName: "${project}", releaseName: "${releaseName}", startingStage: "${stageName}"
+        cloudBeesFlowTriggerRelease configuration: 'flow-server', parameters: '{"release":{"releaseName":"${releaseName}","stages":[{"stageName":"${stageName}","stageValue":""}],"pipelineName":"${releasePipeName","parameters":[]}}', projectName: "${project}", releaseName: "${releaseName}", startingStage: "${stageName}"
+
    }
 }
