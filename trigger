@@ -28,7 +28,6 @@ node {
     stage('Publish'){
         cloudBeesFlowPublishArtifact artifactName: "com.demo:test2", artifactVersion: "${artVersion} - 2 -SNAPSHOT", configuration: 'flow-server', filePath: 'test2.txt', repositoryName: 'default'
    }
-   }
    stage('Test') {
        junit 'target/surefire-reports/*.xml'
    }   
