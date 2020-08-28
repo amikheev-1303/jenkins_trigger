@@ -13,7 +13,7 @@ mvn spring-boot:run
 ```
 Application.java
 ```
-
+upd
 - From executable jar file
 ```
 mvn clean install
