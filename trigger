@@ -1,7 +1,6 @@
 node {
    def mvnHome
    def artVersion = UUID.randomUUID().toString()
-   //def artName = UUID.randomUUID().toString()
    properties([
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
@@ -30,6 +29,5 @@ node {
    }   
    stage('Pipeline') {
        cloudBeesFlowAssociateBuildToRelease configuration: 'flow-server', flowRuntimeId: "${flowRunId}", projectName: "${project}", releaseName: "${releaseName}"
-       //cloudBeesFlowAssociateBuildToRelease configuration: 'flow-server', flowRuntimeId: 'f8e2a167-a747-11ea-821f-42010a000012', projectName: 'Default', releaseName: 'qe release'
    }
 }
