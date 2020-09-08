@@ -1,6 +1,6 @@
 node {
    def mvnHome
-   def artVersion = UUID.randomUUID().toString()
+   //def artVersion = UUID.randomUUID().toString()
    //def artName = UUID.randomUUID().toString()
    properties([
             parameters([
