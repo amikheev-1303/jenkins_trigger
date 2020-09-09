@@ -6,7 +6,7 @@ node {
                     string(name: 'project', defaultValue: 'Default'),
                     string(name: 'releaseName', defaultValue: 'qe release'),
                     string(name: 'flowRunId', defaultValue: 'e9bb5a24-e926-11ea-a1b3-42010a000038'),
-                    string(name: 'artVersion', defaultValue: ""),
+                    string(name: 'artVersion', defaultValue: ''),
 
             ])
     ])
