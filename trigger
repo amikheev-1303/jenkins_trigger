@@ -1,6 +1,5 @@
 node {
    def mvnHome
-   def artVersion = UUID.randomUUID().toString()
    properties([
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
