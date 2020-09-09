@@ -6,7 +6,7 @@ node {
             parameters([
                     string(name: 'project', defaultValue: 'Default'),
                     string(name: 'releaseName', defaultValue: 'qe release'),
-                    string(name: 'artVersion', defaultValue: "$artVersion"),
+                    string(name: 'artVersion', defaultValue: ''),
 
             ])
     ])
