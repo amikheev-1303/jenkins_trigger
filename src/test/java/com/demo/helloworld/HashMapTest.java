@@ -20,6 +20,7 @@ import static org.junit.Assert.assertEquals;
 public class HashMapTest
 {
     // test
+    //test2
     //~ Static fields/initializers ---------------------------------------------
 
     private static final Object VALUE1  = "value1";
