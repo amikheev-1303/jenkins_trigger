@@ -1,0 +1,20 @@
+node {
+   def mvnHome
+   def artVersion = UUID.randomUUID().toString()
+   def artName = UUID.randomUUID().toString()
+   stage('Build') {
+      cleanWs()
+      git 'https://github.com/amikheev-1303/jenkins_trigger.git'
+      // some change
+      mvnHome = tool 'mvn'
+      withEnv(["MVN_HOME=$mvnHome"]) {
+          sh '"$MVN_HOME/bin/mvn" install'
+      }
+   }
+   stage('Archive') {
+       archiveArtifacts 'test1.txt'
+      }
+   stage('Test') {
+       junit 'target/surefire-reports/*.xml'
+   }   
+}
