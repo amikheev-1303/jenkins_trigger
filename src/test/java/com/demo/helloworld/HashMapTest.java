@@ -21,6 +21,7 @@ public class HashMapTest
 {
     // test
     //test2
+    //test3
     //~ Static fields/initializers ---------------------------------------------
 
     private static final Object VALUE1  = "value1";
